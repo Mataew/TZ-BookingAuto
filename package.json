@@ -6,7 +6,10 @@
   "scripts": {
     "server": "nodemon index.js",
     "client": "cd ./client && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "installClient": "cd ./client && npm i",
+    "installBackend": "npm i",
+    "installAll": "npm run installBackend && npm run installClient"
   },
   "keywords": [],
   "author": "",
