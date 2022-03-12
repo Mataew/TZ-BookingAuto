@@ -1,4 +1,4 @@
-# TZ-BookingAuto
+# Инструкция по запуску
 
 git clone https://github.com/Mataew/TZ-BookingAuto.git
 
