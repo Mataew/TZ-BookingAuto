@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main{
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  transform: translateY(50%);
+}
+.car{
+  width: 250px;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+  /*z-index: -1;*/
+}
+
+.car:hover{
+  cursor: pointer;
+}
+
+.choose{
+  position: absolute;
+  /*z-index: 9999;*/
+  background-color: #a3a3a3;
+  width: 30%;
+  height: 100px;
+}
+
+.active{
+  display: block;
+}
