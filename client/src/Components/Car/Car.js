@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Car = (props) => {
+
   return (
-    <div>
+    <>
       <button
         onClick={props.modalWindow ? '' : () => props.openModalWindow(props.car)}
         className={ props.car.booked ? 'car booked' : "car"}
@@ -11,7 +12,7 @@ const Car = (props) => {
         <div>Число мест в машине: {props.car.seatNumber}</div>
         <div>Цена за день: {props.car.dayPrice}</div>
       </button>
-    </div>
+    </>
   );
 };
 

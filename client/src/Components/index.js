@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { bookingCar, carsFilteredLoad, carsLoad } from '../redux/features/carsReducer';
+import {
+  bookingCar,
+  carsDateFilteredLoad,
+  carsFilteredLoad,
+  carsLoad
+} from '../redux/features/carsReducer';
 import '../Styles/Cars.css'
 import '../Styles/ModalWindow.css'
 import Car from './Car/Car';
@@ -54,7 +59,7 @@ const Index = () => {
       <div className="main" >
 
         {cars.map(car => {
-          return <Car car={car} modalWindow={modalWindow} openModalWindow={openModalWindow} />
+          return <Car car={car} isBooking={isBooking} modalWindow={modalWindow} openModalWindow={openModalWindow} />
         })}
 
         { modalWindow ?

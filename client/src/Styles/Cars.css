@@ -1,7 +1,7 @@
 .main{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 15vh;
+  margin-top: 5vh;
 }
 .car{
   width: 250px;
@@ -24,9 +24,13 @@
 }
 
 .booked{
-  background: #d1d1d1;
-  color: black;
+  background: #39ca10;
+  color: white;
 }
 .booked:hover{
-  background: #d1d1d1;
+  background: #39ca10;
+}
+
+.noBooked{
+  background: gray;
 }

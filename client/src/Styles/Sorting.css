@@ -1,6 +1,8 @@
 .sorting{
   margin-top: 70px;
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .select {
@@ -38,4 +40,12 @@
   border-style: solid;
   border-width: 10.4px 6px 0 6px;
   border-color: rgb(72, 137, 248) transparent transparent transparent;
+}
+
+.filterDate{
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
 }

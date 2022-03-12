@@ -12,7 +12,6 @@ app.use(require("./routes/index"));
 const connect = async () => {
   await mongoose.connect(process.env.SERVER_MONGO)
   console.log("Соединение успешно установлено")
-  console.log(process.env.PORT)
   app.listen(process.env.PORT, () => {
     console.log(`Server has been started on port http://localhost:${process.env.PORT}`)
   })

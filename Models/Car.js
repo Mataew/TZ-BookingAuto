@@ -18,7 +18,7 @@ const carSchema = mongoose.Schema({
     required: true
   },
   date: {
-    type: Number,
+    type: String,
     required: true
   },
   booked: {
