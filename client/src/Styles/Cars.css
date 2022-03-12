@@ -1,0 +1,32 @@
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15vh;
+}
+.car{
+  width: 250px;
+  height: 20vh;
+  margin: 10px;
+  padding: 5px;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #148cd4,#81bff4) fixed;
+  color: white;
+}
+
+.car:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 14px 0px black;
+  background: #8624e4;
+  transition: 0.5s;
+}
+
+.booked{
+  background: #d1d1d1;
+  color: black;
+}
+.booked:hover{
+  background: #d1d1d1;
+}

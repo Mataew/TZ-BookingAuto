@@ -1,10 +1,11 @@
 import React from 'react';
-import Cars from './Components/Cars';
+import Index from './Components';
+import './Styles/Global.css'
 
 const App = () => {
   return (
     <div>
-      <Cars/>
+      <Index/>
     </div>
   );
 };
