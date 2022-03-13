@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  bookingCar,
-  carsDateFilteredLoad,
-  carsFilteredLoad,
-  carsLoad
-} from '../redux/features/carsReducer';
+import { bookingCar, carsLoad, carsPriceSortingLoad } from '../redux/features/carsReducer';
 import '../Styles/Cars.css'
 import '../Styles/ModalWindow.css'
 import Car from './Car/Car';
@@ -22,7 +17,7 @@ const Index = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    isFiltered ? dispatch(carsFilteredLoad()) : dispatch(carsLoad())
+    isFiltered ? dispatch(carsPriceSortingLoad()) : dispatch(carsLoad())
   },[dispatch])
 
   const cars = useSelector(state => state.carsReducer.cars)
@@ -41,10 +36,10 @@ const Index = () => {
     setIsBooking(!isBooking)
   }
 
-  const filter = (e) => {
+  const priceSorting = (e) => {
     if (e.target.value === 'По цене'){
       setIsFiltered(e.target.value)
-      dispatch(carsFilteredLoad())
+      dispatch(carsPriceSortingLoad())
     } else{
       setIsFiltered(e.target.value)
       dispatch(carsLoad())
@@ -54,7 +49,7 @@ const Index = () => {
 
   return (
     <>
-      <Sorting filter={filter} />
+      <Sorting priceSorting={priceSorting} />
 
       <div className="main" >
 

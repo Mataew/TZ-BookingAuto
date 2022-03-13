@@ -45,7 +45,7 @@ export const carsLoad = () => {
   }
 }
 
-export const carsFilteredLoad = () => {
+export const carsPriceSortingLoad = () => {
   return async (dispatch) => {
     try {
       const response = await fetch('http://localhost:7000/cars')

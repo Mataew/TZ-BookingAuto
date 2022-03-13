@@ -22,7 +22,7 @@ const Sorting = (props) => {
   return (
     <div className="sorting">
       <div className="select_wrapper">
-        <select className="select" onChange={(e) => props.filter(e)}>
+        <select className="select" onChange={(e) => props.priceSorting(e)}>
           <option>По умолчанию</option>
           <option>По цене</option>
         </select>
