@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { bookingCar, carsLoad, carsPriceSortingLoad } from '../redux/features/carsReducer';
+import {
+  bookingCar,
+  cancelBookingCar,
+  carsLoad,
+  carsPriceSortingLoad
+} from '../redux/features/carsReducer';
 import '../Styles/Cars.css'
 import '../Styles/ModalWindow.css'
 import Car from './Car/Car';
@@ -22,17 +27,23 @@ const Index = () => {
 
   const cars = useSelector(state => state.carsReducer.cars)
 
-  const openModalWindow = (car) => {
+  const openModalWindow = (id) => {
     setModalWindow(true)
-    setInfoCarInModalWindow(car)
+    setInfoCarInModalWindow(id)
   }
 
   const closeModalWindow = () => {
     setModalWindow(false)
   }
 
-  const carBooking = (id, booked) => {
-    dispatch(bookingCar(id, booked))
+  const carBooking = (id) => {
+    dispatch(bookingCar(id))
+    setIsBooking(!isBooking)
+    setModalWindow(false)
+  }
+
+  const cancelBooking = (id) => {
+    dispatch(cancelBookingCar(id))
     setIsBooking(!isBooking)
   }
 
@@ -45,7 +56,6 @@ const Index = () => {
       dispatch(carsLoad())
     }
   }
-
 
   return (
     <>
@@ -62,6 +72,7 @@ const Index = () => {
             closeModalWindow={closeModalWindow}
             infoCarInModalWindow={infoCarInModalWindow}
             isBooking={isBooking}
+            cancelBooking={cancelBooking}
             carBooking={carBooking} />
           : ''}
       </div>
